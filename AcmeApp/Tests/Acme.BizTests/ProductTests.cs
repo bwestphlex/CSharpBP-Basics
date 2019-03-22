@@ -34,7 +34,7 @@ namespace Acme.Biz.Tests
         public void SayHello_ParameterizedConstructor()
         {
             //Arrange
-            var currentProduct = new Product(1, "Saw", 
+            var currentProduct = new Product(1, "Saw",
                 "15-inch steel blade hand saw");
             var expected = "Hello Saw (1): 15-inch steel blade hand saw" +
                 " Available on: ";
@@ -273,5 +273,19 @@ namespace Acme.Biz.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod()]
+        public void CalculateSuggestedPriceTest()
+        {
+            //Arrange
+            var currentProduct = new Product(1, "Saw", "");
+            currentProduct.Cost = 50m;
+            var expected = 55m;
+
+            //Act
+            var actual = currentProduct.CalculateSuggestedPrice(10m);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
