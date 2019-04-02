@@ -97,12 +97,12 @@ namespace Acme.Biz.Tests
             var product = new Product(1, "Saw", "");
             var expected = new OperationResult(true,
                 "Order from Acme, Inc\r\nProduct: Tools-1\r\nQuantity: 12" +
-                "\r\nDeliver By: 25/03/2019" +
+                "\r\nDeliver By: 28/04/2019" +
                 "\r\nInstructions: standard delivery");
 
             // Act
             var actual = vendor.PlaceOrder(product, 12,
-                new DateTimeOffset(2019, 03, 25, 0, 0, 0, new TimeSpan(-7, 0, 0)));
+                new DateTimeOffset(2019, 04, 28, 0, 0, 0, new TimeSpan(-7, 0, 0)));
 
             // Assert
             Assert.AreEqual(expected.Success, actual.Success);
