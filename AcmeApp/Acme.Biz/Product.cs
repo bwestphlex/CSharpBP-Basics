@@ -23,6 +23,29 @@ namespace Acme.Biz
             //this.ProductVendor = new Vendor();
             this.MinimumPrice = .96m;
             this.Category = "Tools";
+            //var colourOptions = new string[4];
+            //colourOptions[0] = "Red";
+            //colourOptions[1] = "Espresso";
+            //colourOptions[2] = "White";
+            //colourOptions[3] = "Navy";
+
+            string[] colourOptions = { "Red", "Espresso", "White", "Navy", };
+
+            var brownIndex = Array.IndexOf(colourOptions, "Espresso");
+
+            colourOptions.SetValue("Blue", 3);
+
+            for (int i = 0; i < colourOptions.Length; i++)
+            {
+                colourOptions[i] = colourOptions[i].ToLower();
+            }
+
+            foreach (var colour in colourOptions)
+            {
+                Console.WriteLine($"The colour is {colour}");
+            }
+
+            Console.WriteLine(colourOptions[1]);
         }
 
         public Product(int productId,
