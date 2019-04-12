@@ -19,6 +19,19 @@ namespace Acme.Biz
         #region Constructors
         public Product()
         {
+            //var colourOptions = new List<string>();
+            //colourOptions.Add("Red");
+            //colourOptions.Add("Espresso");
+            //colourOptions.Add("White");
+            //colourOptions.Add("Navy");
+            //colourOptions.Insert(2, "Purple");
+            //colourOptions.Remove("White");
+
+            var colourOptions = new List<string>()
+            { "Red", "Espresso", "White", "Navy" };
+
+            Console.WriteLine(colourOptions);
+
             Console.WriteLine("Product instance created");
             //this.ProductVendor = new Vendor();
             this.MinimumPrice = .96m;
@@ -29,23 +42,23 @@ namespace Acme.Biz
             //colourOptions[2] = "White";
             //colourOptions[3] = "Navy";
 
-            string[] colourOptions = { "Red", "Espresso", "White", "Navy", };
+            //string[] colourOptions = { "Red", "Espresso", "White", "Navy", };
 
-            var brownIndex = Array.IndexOf(colourOptions, "Espresso");
+            //var brownIndex = Array.IndexOf(colourOptions, "Espresso");
 
-            colourOptions.SetValue("Blue", 3);
+            //colourOptions.SetValue("Blue", 3);
 
-            for (int i = 0; i < colourOptions.Length; i++)
-            {
-                colourOptions[i] = colourOptions[i].ToLower();
-            }
+            //for (int i = 0; i < colourOptions.Length; i++)
+            //{
+            //    colourOptions[i] = colourOptions[i].ToLower();
+            //}
 
-            foreach (var colour in colourOptions)
-            {
-                Console.WriteLine($"The colour is {colour}");
-            }
+            //foreach (var colour in colourOptions)
+            //{
+            //    Console.WriteLine($"The colour is {colour}");
+            //}
 
-            Console.WriteLine(colourOptions[1]);
+            //Console.WriteLine(colourOptions[1]);
         }
 
         public Product(int productId,
